@@ -1,0 +1,8 @@
+Discerning results by a specific operator
+  SELECT *
+  FROM [ODS].[dbo].[OTH_CURRENCYRATES]
+  WHERE [SourceCurrency] in ('MXN', 'CNY')
+  AND [TargetCurrency] in ('EUR')
+  and [Period] like '2008[0-12]%'
+
+-- The specific operator here is that you want to have each result given back have the year 2018 and the periods between 0 and 12.
