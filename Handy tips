@@ -6,3 +6,16 @@ Discerning results by a specific operator
   and [Period] like '2008[0-12]%'
 
 -- The specific operator here is that you want to have each result given back have the year 2018 and the periods between 0 and 12.
+
+Straightforward insert statement on a single table
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'USD' sourcecurrency, 'EUR' targetcurrency, 0.8401172804 closingexchangerate, 0.8401172804 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'EUR' sourcecurrency, 'USD' targetcurrency, 1.1903100000 closingexchangerate, 1.1903100000 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'CAD' sourcecurrency, 'EUR' targetcurrency, 0.6682928459 closingexchangerate, 0.6682928459 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'MXN' sourcecurrency, 'EUR' targetcurrency, 0.0404198817 closingexchangerate, 0.0404198817 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'CNY' sourcecurrency, 'EUR' targetcurrency, 0.1286248079 closingexchangerate, 0.1286248079 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'CAD' sourcecurrency, 'USD' targetcurrency, 0.7954756574 closingexchangerate, 0.7954756574 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'MXN' sourcecurrency, 'USD' targetcurrency, 0.0481121894 closingexchangerate, 0.0481121894 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'CNY' sourcecurrency, 'USD' targetcurrency, 0.1531033951 closingexchangerate, 0.1531033951 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'GBP' sourcecurrency, 'EUR' targetcurrency, 1.1650937901 closingexchangerate, 1.1650937901 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
+
+Insert into <table> select <'value' columnname,>;
