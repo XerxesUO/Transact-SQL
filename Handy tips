@@ -1,4 +1,4 @@
-Discerning results by a specific operator
+1. Discerning results by a specific operator
   SELECT *
   FROM [ODS].[dbo].[OTH_CURRENCYRATES]
   WHERE [SourceCurrency] in ('MXN', 'CNY')
@@ -7,7 +7,7 @@ Discerning results by a specific operator
 
 -- The specific operator here is that you want to have each result given back have the year 2018 and the periods between 0 and 12.
 
-Straightforward insert statement on a single table
+2. Straightforward insert statement on a single table
 insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'USD' sourcecurrency, 'EUR' targetcurrency, 0.8401172804 closingexchangerate, 0.8401172804 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
 insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'EUR' sourcecurrency, 'USD' targetcurrency, 1.1903100000 closingexchangerate, 1.1903100000 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
 insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'CAD' sourcecurrency, 'EUR' targetcurrency, 0.6682928459 closingexchangerate, 0.6682928459 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
@@ -18,4 +18,7 @@ insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' perio
 insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'CNY' sourcecurrency, 'USD' targetcurrency, 0.1531033951 closingexchangerate, 0.1531033951 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
 insert into ods.dbo.oth_currencyrates select 'Actuals' datalevel, '202103' period, 'GBP' sourcecurrency, 'EUR' targetcurrency, 1.1650937901 closingexchangerate, 1.1650937901 averageexchangerate, 1 YTDexchangerate, 3 ytdbegin;
 
+SYNTAX
 Insert into <table> select <'value' columnname,>;
+
+3. UOPDATE STATEMENT
